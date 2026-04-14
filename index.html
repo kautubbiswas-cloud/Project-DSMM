@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteDash | Delicious Food Delivered</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">B</div>
+                <span>BiteDash</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="cart-btn" class="icon-btn">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="badge">0</span>
+                </button>
+                <button id="menu-toggle" class="icon-btn md-hide">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-accent"></div>
+        <div class="container grid">
+            <div class="hero-content">
+                <span class="tag">Fastest Delivery in Town</span>
+                <h1>Delicious Food <br> <span class="text-brand">Delivered</span> To Your Door</h1>
+                <p>Craving something special? From gourmet pizzas to fresh salads, we bring the best local flavors straight to you. Fresh, fast, and always delicious.</p>
+                <div class="btn-group">
+                    <a href="#menu" class="btn btn-brand">Order Now</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="user-avatars">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=13" alt="User">
+                        <img src="https://i.pravatar.cc/100?img=14" alt="User">
+                    </div>
+                    <div class="stats-text">
+                        <div class="stars">
+                            <i data-lucide="star" class="fill-yellow"></i>
+                            <i data-lucide="star" class="fill-yellow"></i>
+                            <i data-lucide="star" class="fill-yellow"></i>
+                            <i data-lucide="star" class="fill-yellow"></i>
+                            <i data-lucide="star" class="fill-yellow"></i>
+                        </div>
+                        <p><strong>5,000+</strong> Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://picsum.photos/seed/food-hero/800/800" alt="Food">
+                </div>
+                <div class="floating-card top-right">
+                    <div class="card-icon bg-green"><i data-lucide="check-circle-2"></i></div>
+                    <div>
+                        <p class="font-bold">Fresh Quality</p>
+                        <p class="text-xs">100% Organic</p>
+                    </div>
+                </div>
+                <div class="floating-card bottom-left">
+                    <div class="card-icon bg-orange"><i data-lucide="shopping-cart"></i></div>
+                    <div>
+                        <p class="font-bold">Free Delivery</p>
+                        <p class="text-xs">On orders over $30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container grid">
+            <div class="about-images">
+                <img src="https://picsum.photos/seed/chef/400/600" alt="Chef" class="img-1">
+                <img src="https://picsum.photos/seed/kitchen/400/600" alt="Kitchen" class="img-2">
+            </div>
+            <div class="about-content">
+                <span class="tag-text">Our Story</span>
+                <h2>We Cook With Passion & <br> Serve With Love</h2>
+                <p>Founded in 2020, BiteDash started with a simple mission: to connect food lovers with the best local ingredients. We believe that great food should be accessible to everyone, anywhere.</p>
+                <ul class="check-list">
+                    <li><i data-lucide="check-circle-2"></i> Fresh and healthy ingredients</li>
+                    <li><i data-lucide="check-circle-2"></i> Fast and reliable delivery</li>
+                    <li><i data-lucide="check-circle-2"></i> Easy online ordering system</li>
+                    <li><i data-lucide="check-circle-2"></i> Best quality at affordable prices</li>
+                </ul>
+                <a href="#menu" class="btn btn-brand">Explore Our Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag-text">Our Menu</span>
+                <h2>Popular Dishes</h2>
+                <p>Check out our most loved dishes, prepared with the freshest ingredients and delivered hot to your doorstep.</p>
+            </div>
+
+            <div class="menu-controls">
+                <div class="filter-btns" id="filter-btns">
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="Veg">Veg</button>
+                    <button class="filter-btn" data-category="Non-Veg">Non-Veg</button>
+                    <button class="filter-btn" data-category="Dessert">Dessert</button>
+                    <button class="filter-btn" data-category="Beverage">Beverage</button>
+                </div>
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="menu-search" placeholder="Search for food...">
+                </div>
+            </div>
+
+            <div class="food-grid" id="food-grid">
+                <!-- Items injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order">
+        <div class="container grid">
+            <div class="order-form-container">
+                <span class="tag-text">Checkout</span>
+                <h2>Order Now</h2>
+                <form id="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                            <span class="error" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                            <span class="error" id="email-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                        <span class="error" id="phone-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea id="address" rows="3" placeholder="Street name, City, State, Zip" required></textarea>
+                        <span class="error" id="address-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select id="payment">
+                            <option>Cash on Delivery</option>
+                            <option>Credit Card</option>
+                            <option>PayPal</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-brand btn-full">Place Order</button>
+                </form>
+            </div>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="summary-items" class="summary-items">
+                    <!-- Items injected by JS -->
+                </div>
+                <div class="summary-footer">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span>$2.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summary-total">$2.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container grid">
+            <div class="contact-info">
+                <span class="tag-text">Contact Us</span>
+                <h2>Get In Touch</h2>
+                <p>Have questions about our menu, delivery, or catering? We're here to help!</p>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="phone"></i></div>
+                        <div>
+                            <p class="label">Call Us</p>
+                            <p class="value">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="mail"></i></div>
+                        <div>
+                            <p class="label">Email Us</p>
+                            <p class="value">hello@bitedash.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <p class="label">Visit Us</p>
+                            <p class="value">123 Foodie Lane, Gourmet City</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                    </div>
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="4" placeholder="Your Message"></textarea>
+                    <button type="button" class="btn btn-brand btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid">
+            <div class="footer-about">
+                <div class="logo">
+                    <div class="logo-icon">B</div>
+                    <span>BiteDash</span>
+                </div>
+                <p>The best local flavors delivered straight to your door. Fresh, fast, and always delicious.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#order">Order Now</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BiteDash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="overlay hidden"></div>
+    <div id="cart-drawer" class="drawer hidden">
+        <div class="drawer-header">
+            <h2><i data-lucide="shopping-cart"></i> Your Cart</h2>
+            <button id="close-cart" class="icon-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div id="cart-items" class="drawer-body">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="drawer-footer">
+            <div class="total-row">
+                <span>Total Amount</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="btn btn-brand btn-full">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="hidden"><i data-lucide="chevron-up"></i></button>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="toast hidden">
+        <div class="toast-icon"><i data-lucide="check-circle-2"></i></div>
+        <div class="toast-content">
+            <p class="font-bold">Order Placed Successfully!</p>
+            <p class="text-sm">Your food is being prepared.</p>
+        </div>
+        <button id="close-toast"><i data-lucide="x"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

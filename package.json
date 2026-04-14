@@ -1,0 +1,14 @@
+{
+  "name": "bitedash-static",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "build": "echo 'No build step needed for static files'",
+    "preview": "npx serve . -p 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
